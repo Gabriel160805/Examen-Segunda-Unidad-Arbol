@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #606B73;
+    height: 100vh;
+    color: #FFFFFF;
+    font-family: "titulo1";
+    justify-content: center;
+    text-align: center;
+}
+
+h1, h2, h3, h4 {
+    font-family: "regular";
+}
+
+header {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background: #7A7A7A;
+}
+
+/* Contenedor del título y navegación */
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.title-1 {
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.container-nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.link-nav {
+    background-color: #A69F95;
+    padding: 1rem;
+    width: 7.5rem;
+    height: 1.5rem;
+    margin: 1rem 1rem 0 0;
+    border: solid 3px #000000;
+    border-radius: .9rem;
+    text-align: center;
+    display: grid;
+    place-content: center;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+#uno {
+    margin-top: 8rem;
+}
+
+.controls {
+    margin: 1rem;
+}
+
+#tree-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+/* Estilo para el nodo principal */
+.node {
+    padding: 1rem;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #A69F95;
+    color: #FFFFFF;
+    margin: 0.5rem;
+}
+
+/* Contenedor de hijos con espacio adicional para evitar empalmes */
+.child-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+/* Estilo para los contenedores izquierdo y derecho */
+.left-container, .right-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+@font-face {
+    font-family: "titulo1";
+    src: url("../Font/POSTERABLE.ttf");
+}
+
+@font-face {
+    font-family: "regular";
+    src: url("../Font/Vogue.ttf");
+}

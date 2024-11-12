@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea</title>
+    <link rel="stylesheet" href="./img/3186848_game_zelda_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./Style/index.css">
+</head>
+<body>
+    <header>
+        <h1 class="title-1">Examen Unidad 2</h1>
+        <nav class="container-nav">
+            <a class="link-nav" href="#uno">Pila</a>
+            <a class="link-nav" href="#dos">Cola</a>
+            <a class="link-nav" href="#tres">Lista Simple</a>
+            <a class="link-nav" href="#cuatro">Lista Doble</a>
+            <a class="link-nav" href="#cinco">Lista Circular</a>
+            <a class="link-nav" href="#seis">Arbol</a>
+        </nav>
+    </header>
+    <section id="uno">
+        <h1>Lógica de una Pila</h1>
+        <p>•La lógica de una pila se basa en la estructura de que el ultimo elemento en entrar es el primero en salir y el primero en entrar es el ultimo en salir. Lo cual es similar a una pila de platos: cuando apilas platos, el último en colocarse en la cima es el primero en retirarse.</p>
+        <h2>Características principales de una pila:</h2>
+        <p>•	1) Push: Añadir un elemento a la cima de la pila.</p>
+        <p>•	2) Pop: Retirar el elemento de la cima de la pila.</p>
+        <p>•	3) Top o Peek: Ver el elemento en la cima sin retirarlo.</p>
+        <p>•	4) isEmpty: Comprobar si la pila está vacía.</p>
+    </section>
+    <section id="dos">
+    </section>
+        <h1>Logica de una Cola</h1>
+        <p>La logica de una cola es simple, es una estructura que sigue el principio de el primero en entrar es el primero en salir.</p>
+    </section>
+    <section id="tres">
+    </section>
+        <h1>Logica de una Lista Simple</h1>
+        <p>Una lista simple consiste en una secuencia de nodos, donde cada nodo contiene dos campos:</p>
+        <p>•	1) Datos: El valor almacenado en el nodo.</p>    
+        <p>•	2) Enlace: Un puntero al siguiente nodo en la secuencia.</p>            
+        <p>En una lista simple, la inserción y eliminación de nodos se realiza ajustando los punteros en consecuencia.</p>
+    </section>
+    <section id="cuatro">
+    </section>
+        <h1>Logica de una Lista Doble</h1>
+        <p>Una lista doble es similar a una lista simple, pero cada nodo contiene un enlace al siguiente nodo y otro enlace al nodo anterior. Esto permite la navegación en ambas direcciones, hacia adelante y hacia atrás.</p>
+    </section>
+    <section id="cinco">
+    </section>
+        <h1>Logica de una lista Circular</h1>
+        <p>En una lista circular, el último nodo de la lista está vinculado de nuevo al primer nodo, formando un círculo. Puede ser tanto simple como doble. En una lista circular simple, cada nodo tiene un enlace al siguiente nodo, y el último nodo está enlazado al primero. En una lista circular doble, cada nodo tiene enlaces a los nodos anterior y siguiente.</p>
+    </section>
+    <section id="seis">
+    </section>
+        <h1>Logica de un Arbol</h1>
+        <p>Un árbol es una estructura de datos jerárquica que se utiliza para organizar y almacenar información de manera eficiente. Los árboles son fundamentales en la informática y se utilizan en una variedad de aplicaciones, como bases de datos, sistemas de archivos y algoritmos de búsqueda.</p>
+        <h2>Componentes de un Árbol</h2>
+        <P>•	1) Nodo: La unidad básica de un árbol, que contiene datos y enlaces a otros nodos.</P>
+        <P>•	2) Raíz: El nodo superior de un árbol, que no tiene un nodo padre.</P>
+        <p>•	3) Hojas: Nodos que no tienen hijos.</p>
+        <p>•	4) Nodos internos: Nodos que tienen al menos un hijo.</p>
+        <p>•	5) Ramas o Enlaces: Conexiones entre nodos.</p>
+        <h2>Propiedades de un Árbol</h2>
+        <p>•	1) Un nodo raíz: Todos los árboles tienen un nodo raíz desde donde comienza la estructura.</p>
+        <p>•	2) Hijos: Cada nodo puede tener cero o más hijos.</p>
+        <p>•	3) Padre: Cada nodo (excepto el nodo raíz) tiene exactamente un padre.</p>
+        <p>•	4) Subárbol: Cualquier nodo y todos sus descendientes forman un subárbol.</p>
+        <h2>Ejemplo de árbol binario</h2>
+        <div class="controls">
+            <input type="number" id="valor" placeholder="Valor">
+            <button onclick="agregarNodo()">Agregar</button>
+            <button onclick="eliminarNodo()">Eliminar</button>
+            <button onclick="buscarNodo()">Buscar</button>
+        </div>
+        <div id="tree-container"></div>
+        <br><br>
+        <h1>Creacion del codigo</h1>
+        <p>Se define la clase Nodo el cual cuenta con unos parametros valor y dos referencias una para el hijo izquierdo y otro para el derecho, despues se define la clase arbol que va a representar el arbol binario, con una propiedad ruta que es la raiz del arbol.</p>
+        <p>Dentro de la clase arbol, se crean los metodos isEmpty, para verificar si el arbol esta vacio revisando si la ruta es igual a null.</p>
+        <p>Tambien se crea el metodo add para agregar un valor al arbol.</p>
+        <p>Se creo el metodo buscar que lo que hace es buscar un valor en el arbol, y si lo encuentra lo retorna, si no retorna un null.</p>
+        <p>Tambien se creo un metodo eliminar, para eliminar un valor especifico, el cual utiliza un metodo auxiliar llamado _eliminaNodo para encontrar y eliminar el nodo contemplando lo siguiente, si el nodo no tiene hijos, si el nodo a eliminar tiene un solo hijo, y si el nodo a eliminar tiene dos hijos y si es asi remplasa el nodo por el mas pequeño del subarbol derecho.</p>
+        <p>Se crea el metodo auxiliar _encontrarMinimo para encontrar el valor minimo del subarbol, que se utiliza durante la eliminacion de un nodo con dos hijos.</p>
+        <p>Se creo el metodo renderTree lo que hace es dibujar el arbol en el DOM, lo que hace es limpiar el contenedor del arbol y luego llama al metodo _drawNode para mostrar cada nodo.</p>
+        <p>Para finalizar se crea el metodo _drawNode, lo que hace es crear un div para representar el nodo y lo agrega al contenedor del nodo padre, si el nodo tiene hijos crea un child-container, donde se colocaran los contenedores left-container para el hijo izquierdo y right-container para el hijo derecho, si existen hijos en izquerda o en derecha la metodo se buelbe a llamar para que se crean los nodos en el contenedor adecuado.</p>
+        <br><br><br>
+    </section>
+    
+    <script src="./js/index.js"></script>
+</body>
+<footer>
+    <div id="container"></div>
+</footer>
+</html>
